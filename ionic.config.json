@@ -1,0 +1,7 @@
+{
+  "name": "ChampiosLApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

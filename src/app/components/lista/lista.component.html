@@ -1,0 +1,18 @@
+<h2>Lista de Jogos:</h2>
+<hr>
+<div>
+  <div class="card mb-3" style="max-width: 540px;" *ngFor="let jogo of jogos">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="jogo.background_image" width="200" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{jogo.name}}</h5>
+          <p class="card-text"><small class="text-muted">Lançamento: {{jogo.released}}</small></p>
+        </div>
+      </div>
+      <button class="btn btn-block btn-outline-success" [routerLink] = "[ ' /detalhes ', jogo.slug ]" routerLinkActive="router-link-active"></button>
+    </div>
+  </div>
+</div>

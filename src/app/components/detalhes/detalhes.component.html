@@ -1,0 +1,23 @@
+<div class="card text-bg-dark">
+  <img [src]="jogo.background_image" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{jogo.name_original}}</h5>
+    <p class="card-text"><small>Lançamento: {{jogo.released}}</small></p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Descrição do Jogo</h5>
+    <div class="card-text" [innerHtml] = "jogo.description"></div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <video [src]="jogo.clip.clip" controls></video>
+  <div class="card-body">
+    <h5 class="card-title">Produzido por: {{jogo.developers[0].name }}</h5>
+    <p class="card-text">{{jogo.description_r}}</p>
+    <p class="card-text"><small class="text-muted">Última Atualização: {{jogo.updated | date}}</small></p>
+  </div>
+</div>
+</div>
